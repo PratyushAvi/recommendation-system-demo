@@ -8,7 +8,7 @@ let courses = {};
 let top_5 = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    var tag_list_HTML = document.getElementById('tag-list');
+    let tag_list_HTML = document.getElementById('tag-list');
 
     for (let o in occupations) {
         tag_distribution[occupations[o]] = 0.1
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let text3 = document.createElement('p');
         text1.innerHTML = occupations[o];
         text2.innerHTML = '|'
-        text2.classList = 'mx-[10px]'
+        text2.classList = 'mx-[6px] md:mx-[10px]'
         text1.classList = 'mx-[2px]'
         text3.innerHTML = tag_distribution[occupations[o]];
         text3.id = 'button-' + o + '-text';
@@ -134,12 +134,13 @@ function showCourses() {
         let item = document.createElement('div');
         let text1 = document.createElement('p');
         text1.innerText = 'Course ' + top_5[t].course + ' (Score: ' + top_5[t].score + ')';
-        text1.classList = 'font-bold'
+        text1.classList = 'font-bold text-[0.9rem] md:text-[1.2rem]'
         let text2 = document.createElement('p');
         text2.innerText = 'Tags: ' + courses[top_5[t].course];
-        text2.classList ='italic'
+        text2.classList ='text-[0.7rem] md:text-[1rem] italic'
         item.appendChild(text1);
         item.appendChild(text2);
+        // item.classList = 'flex'
 
         let options = document.createElement('ul');
         options.classList = 'flex';
@@ -148,13 +149,13 @@ function showCourses() {
 
         for (let a in actions) {
             let action_button = document.createElement('button');
-            action_button.classList = 'w-[100px] default_button';
+            action_button.classList = 'md:w-[100px] default_button';
             action_button.innerHTML = actions[a];
 
             options.appendChild(action_button);
 
             action_button.onclick = function () {
-                action_button.classList = 'w-[100px] selected_button';
+                action_button.classList = 'md:w-[100px] selected_button';
                 executeAction(action_button.innerHTML, top_5[t].course);
                 updateDistributionView();
                 showCourses();

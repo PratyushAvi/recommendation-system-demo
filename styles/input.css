@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .default_button {
-    @apply m-[4px] p-[8px] text-[0.9rem] text-center border-solid border-[2px] rounded-2xl inline-block bg-[#fff] hover:bg-[#ddd] transition ease-in-out duration-300;
+    @apply m-[3px] p-[6px] md:m-[4px] md:p-[8px] text-[0.6rem] md:text-[0.9rem] text-center border-solid border-[2px] rounded-2xl inline-block bg-[#fff] hover:bg-[#ddd] transition ease-in-out duration-300;
 }
 
 .selected_button {
-    @apply m-[4px] p-[8px] text-[0.9rem] text-[#fff] text-center border-solid border-[2px] border-[black] rounded-2xl inline-block bg-[#000] transition ease-in-out duration-300;
+    @apply m-[3px] p-[6px] md:m-[4px] md:p-[8px] text-[0.6rem] md:text-[0.9rem] text-[#fff] text-center border-solid border-[2px] border-[black] rounded-2xl inline-block bg-[#000] transition ease-in-out duration-300;
 }
 
 .superdiv {
-    @apply mx-auto my-[10px] p-[10px] flex border-solid border-[2px] rounded-2xl justify-between;
+    @apply mx-auto my-[10px] p-[10px] md:flex border-solid border-[2px] rounded-2xl justify-between;
 }
